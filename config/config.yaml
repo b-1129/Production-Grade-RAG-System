@@ -1,0 +1,38 @@
+# RAG Agent Configuration
+
+agent:
+  # Maximum refinement iterations
+  max_iterations: 3
+  
+  # Enable reranking
+  enable_reranking: true
+  
+  # Number of documents to retrieve
+  top_k: 5
+
+llm:
+  # LLM model to use
+  model: "gemma2-9b-it"
+  
+  # Temperature for generation
+  temperature: 0.7
+  
+  # Maximum tokens to generate
+  max_tokens: 1024
+
+retriever:
+  # Embedding model
+  embedding_model: "all-MiniLM-L6-v2"
+  
+  # Vector store persistence directory
+  persist_dir: "faiss_store"
+  
+  # Number of chunks to retrieve
+  default_top_k: 5
+
+reranker:
+  # Reranker model
+  model: "gemma2-9b-it"
+  
+  # Number of documents after reranking
+  top_k: 3
